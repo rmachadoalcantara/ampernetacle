@@ -15,10 +15,10 @@ data "oci_identity_availability_domains" "_" {
 data "oci_core_images" "_" {
   compartment_id           = local.compartment_id
   shape                    = var.shape
-  operating_system         = "Canonical Ubuntu"
-  operating_system_version = "20.04"
-  #operating_system         = "Oracle Linux"
-  #operating_system_version = "7.9"
+  #operating_system         = "Canonical Ubuntu"
+  #operating_system_version = "20.04"
+  operating_system         = "Oracle Linux"
+  operating_system_version = "8"
 }
 
 resource "oci_core_instance" "_" {
